@@ -1,0 +1,58 @@
+---
+
+name: eplant_navigator_service
+description: A pass-through adapter for BAR navigator web service.
+version: 0.1
+icon: BAR.png
+tags:
+    - 'ePlant'
+    - 'Navigator'
+    - 'Arabidopsis'
+    - 'Expression'
+    - 'BAR'
+
+authors:
+    - name: Asher Pasha
+      email: asher.pasha@utoronto.ca
+      sponsor_organization: University of Toronto
+      sponsor_uri: http://www.utoronto.ca/
+
+type: passthrough
+url: http://bar.utoronto.ca/webservices/eplant_navigator/cgi-bin
+whitelist:
+    - bar.utoronto.ca
+
+endpoints:
+    /access/eplant_navigator_service.cgi:
+        get:
+            description: Return a JSON data structure for ePlant Navigator Adapter
+            parameters:
+                - name: primaryGene
+                  description: Arapidopsis AGI
+                  type: string
+                  required: true
+                  default: AT1G10200
+                - name: species
+                  description: Species name
+                  type: string
+                  required: true
+                  default: Arabidopsis
+                - name: dataset
+                  description: The dataset to search
+                  type: string
+                  required: true
+                  default: Developmental
+                - name: checkspecies
+                  description: Other species to search
+                  type: string
+                  required: true
+
+sources:
+    - title: BAR ePlant Navigator
+      description: Navigator for the ePlant project
+      language: en-ca
+      sponsor_organization_name: University of Toronto
+      sponsor_uri: http://www.utoronto.ca/
+      provider_name: Nicholas Provart
+      provider_email: nicholas.provart@utoronto.ca
+      uri: http://bar.utoronto.ca/

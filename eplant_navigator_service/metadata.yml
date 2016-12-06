@@ -43,7 +43,7 @@ endpoints:
                 - name: checkspecies
                   description: Other species to search
                   type: string
-				  default: arabidopsis_poplar_medicago_soybean_rice_barley_maize_potato_tomato_grape
+                  default: arabidopsis_poplar_medicago_soybean_rice_barley_maize_potato_tomato_grape
 
 sources:
     - title: BAR ePlant Navigator

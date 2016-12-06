@@ -35,17 +35,15 @@ endpoints:
                 - name: species
                   description: Species name
                   type: string
-                  required: true
                   default: Arabidopsis
                 - name: dataset
                   description: The dataset to search
                   type: string
-                  required: true
                   default: Developmental
                 - name: checkspecies
                   description: Other species to search
                   type: string
-                  required: true
+				  default: arabidopsis_poplar_medicago_soybean_rice_barley_maize_potato_tomato_grape
 
 sources:
     - title: BAR ePlant Navigator
